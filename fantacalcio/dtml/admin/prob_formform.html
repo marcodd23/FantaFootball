@@ -1,0 +1,19 @@
+<div class="hero-unit">
+<form class="form-horizontal" method="post" action="prob_formform.php?action=<[ACTION]>">
+<input type="hidden" value="<[PROVENIENZA]>" name="provenienza">
+<input type="hidden" value="<[ID_SQUADRA]>" name="id_hidden">
+  <h3><[SQUADRA]></h3>
+  <div class="control-group">
+  <[foreach]>
+  <label class="checkbox">
+  	<input type="checkbox" id="" name="giocatori[]" value="<[ID]>" <[CHECKED]>> <[NOME]>
+  </label>
+  <[/foreach]>
+  </div>
+  <div class="control-group">
+    <div class="controls" style="margin-left: auto;">
+      <button type="submit" class="btn btn-primary">Salva</button>
+    </div>
+  </div>
+</form>
+  </div>

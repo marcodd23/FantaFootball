@@ -1,0 +1,35 @@
+<div class="hero-unit">
+<form class="form-horizontal" method="post" action="serviceform.php?action=<[ACTION]>">
+<input type="hidden" value="<[PROVENIENZA]>" name="provenienza">
+<input type="hidden" value="<[ID]>" name="id_hidden">
+  <div class="control-group">
+    <label class="control-label" for="inputNome">Nome</label>
+    <div class="controls">
+      <input type="text" id="inputNome" placeholder="Nome" name="nome" value="<[NOME]>">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputAzione">Azione</label>
+    <div class="controls">
+      <input type="text" id="inputAzione" placeholder="Azione" name="azione" value="<[AZIONE]>">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputGruppo">Gruppo</label>
+    <div class="controls">
+    <[foreach]>
+     <div class="checkbox">
+    <label>
+      <input type="checkbox" value="<[ID_GRUPPO]>" name="gruppo[]" <[CHECKED]>/> <[NOME_GRUPPO]>
+    </label>
+  </div>
+    <[/foreach]>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn btn-primary">Salva</button>
+    </div>
+  </div>
+</form>
+</div>

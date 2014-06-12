@@ -1,0 +1,42 @@
+<div class="hero-unit">
+<form class="form-horizontal" method="post" action="playerform.php?action=<[ACTION]>">
+<input type="hidden" value="<[PROVENIENZA]>" name="provenienza">
+<input type="hidden" value="<[ID]>" name="id_hidden">
+  <div class="control-group">
+    <label class="control-label" for="inputNome">Nome</label>
+    <div class="controls">
+      <input type="text" id="inputNome" placeholder="Nome" name="nome" value="<[NOME]>">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputCognome">Cognome</label>
+    <div class="controls">
+      <input type="text" id="inputCognome" placeholder="Cognome" name="cognome" value="<[COGNOME]>">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputQuotazione">Quotazione</label>
+    <div class="controls">
+      <input type="text" id="inputQuotazione" placeholder="Quotazione" name="quotazione" value="<[QUOTAZIONE]>">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputRuolo">Ruolo</label>
+    <div class="controls">
+    	<[SELECT_RUOLI]>
+     
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputSquadra">Squadra</label>
+    <div class="controls">
+      <[SELECT_SQUADRE]>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn btn-primary">Salva</button>
+    </div>
+  </div>
+</form>
+</div>

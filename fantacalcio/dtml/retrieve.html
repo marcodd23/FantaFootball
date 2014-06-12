@@ -1,0 +1,21 @@
+<script>
+$("#contact").addClass("active");
+</script>
+<section class="content">
+    <header class="page-header">
+      <h1>Recupera password</h1>
+    </header>
+    <div class="row mb15">
+    <div class="span4"></div>
+    <div class="span4">
+    	<form method="post" action="retrieve.php?action=submit" id="retrieve_form" novalidate="novalidate">
+    	<p>Se sei iscritto la nuova password ti verrà inviata via email</p>
+		<label for="email"></label>       
+        <input type="text" name="email" value="<[EMAIL]>" id="email" placeholder="Email" title="Inserisci un indirizzo email valido">
+    	<button class="btn btn-standard" type="submit">Recupera</button>
+    	</form>
+    </div>
+    <div class="span4"></div>
+     </div>
+    <!-- map -->
+  </section>

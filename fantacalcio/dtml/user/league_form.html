@@ -1,0 +1,75 @@
+<header class="page-header">
+      <h1><[TITLE]> lega</h1>
+    </header>
+   <section class="container clearfix slideContactpage">
+      <div class="row">
+        <div id="contactinfoWrapperPage" class="clearfix">
+          <div class="span4" style="height: 1000px;">
+          <p>Ricorda:</p>
+            <ul>
+            <li>Il campo nome è obbligatorio</li>
+            <li>Creando una lega ne diventi automaticamente l'amministratore</li>
+            <li>Puoi invitare tutti gli amici che vuoi e nominare altri amministratori</li>
+            <li>I campi del regolamento devono essere numeri (positivi o negativi)</li>
+            <li>Se i campi del regolamento vengono lasciati vuoti verrà usata la configurazione di default</li>
+            <li>Puoi cambiare impostazioni di lega ogni volta che vuoi</li>
+            </ul>
+          </div>
+          <!-- contact form -->
+          <form method="post" action="league_submit.php?action=<[ACTION]>" id="league_form" novalidate="novalidate" class="form">
+          <div class="span8">
+           <h2>Lega</h2>          
+              <label for="name" class="<[CLASS]>"><[NAME_MESSAGE]></label>
+              <input type="text" name="name" id="name" placeholder="Nome" title="Il nome è obbligatorio" value="<[NAME_VALUE]>">
+ 			  <label for="teams" class="<[CLASS]>"><[TEAMS_MESSAGE]></label>
+              <input type="text" name="teams" id="teams" placeholder="Numero squadre" title="Il numero di squadre deve essere un numero > 1" value="<[TEAMS_VALUE]>">
+ 			 <!-- <strong>Tipo competizione:</strong>
+ 			 <div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				Campionato	
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				Gironi
+			  </label>
+			</div>  -->
+          </div>
+          <div class="span8">
+          	<h2>Regolamento</h2>          
+          </div>
+          <div class="span4">
+	          <label for="gf" class="<[CLASS]>"><[GF_MESSAGE]></label>
+	          <input type="text" name="gf" id="gf" placeholder="Goal fatti (default: +3)" title="Il campo deve essere un numero" value="<[GF_VALUE]>">
+	          <label for="gs" class="<[CLASS]>"><[GS_MESSAGE]></label>
+	          <input type="text" name="gs" id="gs" placeholder="Gol subiti (default: -1)" title="Il campo deve essere un numero" value="<[GS_VALUE]>">
+	          <label for="assist" class="<[CLASS]>"><[ASSIST_MESSAGE]></label>
+	          <input type="text" name="assist" id="assist" placeholder="Assist (default: +1)" title="Il campo deve essere un numero" value="<[ASSIST_VALUE]>">
+              <label for="rp" class="<[CLASS]>"><[RP_MESSAGE]></label>
+	          <input type="text" name="rp" id="rp" placeholder="Rigore parato (default: +3)" title="Il campo deve essere un numero" value="<[RP_VALUE]>">
+              <label for="rs" class="<[CLASS]>"><[RS_MESSAGE]></label>
+	          <input type="text" name="rs" id="rs" placeholder="Rigore sbagliato (default: -3)" title="Il campo deve essere un numero" value="<[RS_VALUE]>">
+          </div>
+          <div class="span4">
+	          <label for="ag" class="<[CLASS]>"><[AG_MESSAGE]></label>
+	          <input type="text" name="ag" id="ag" placeholder="Autogol (default: -3)" title="Il campo deve essere un numero" value="<[AG_VALUE]>">
+	          <label for="amm" class="<[CLASS]>"><[AMM_MESSAGE]></label>
+	          <input type="text" name="amm" id="amm" placeholder="Ammonizione (default: +0.5)" title="Il campo deve essere un numero" value="<[AMM_VALUE]>">
+	          <label for="esp" class="<[CLASS]>"><[ESP_MESSAGE]></label>
+	          <input type="text" name="esp" id="esp" placeholder="Espulsione (default: +1)" title="Il campo deve essere un numero" value="<[ESP_VALUE]>">
+          	  <label for="gp" class="<[CLASS]>"><[GP_MESSAGE]></label>
+	          <input type="text" name="gp" id="gp" placeholder="Gol pareggio (default: 0)" title="Il campo deve essere un numero" value="<[GP_VALUE]>">
+	          <label for="gv" class="<[CLASS]>"><[GV_MESSAGE]></label>
+	          <input type="text" name="gv" id="gv" placeholder="Gol vittoria (default: 0)" title="Il campo deve essere un numero" value="<[GV_VALUE]>">
+          </div>
+          <div class="span8">
+          <p><br><button name="submit" type="submit" class="btn" id="submit"> Conferma</button></p>
+          </div>
+          
+          </form>	
+          <!-- contact form -->
+        </div>
+       </div>
+    </section>

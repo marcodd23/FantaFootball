@@ -1,0 +1,45 @@
+<section class="content">
+    <header class="page-header">
+      <h1>Vedi rosa<a href="league.php?id=<[LEAGUE_ID]>" style="float: right;" title="Torna alla pagina di lega"><i class="icon-left-circled"></i></a></h1>
+    </header>
+    <div class="row">    
+    	<div class="span12"><h2><[NOME_ROSA]> <span><[ALLENATORE]></span><[MODIFICA_ROSA]></h2></div>
+    </div>
+    <!-- team2-->
+    <section>
+    <[foreach]>
+      <article>
+        <div class="row">
+          <div class="span3"> <img src="../resources/my/images/player_default.jpg" alt="team superweb"></div>
+          <div class="span3">
+            <h3><[COGNOME]>, <[NOME]> </h3>
+            <p><strong>Ruolo: </strong><[RUOLO]></p>
+            <p><strong>Squadra: </strong><[SQUADRA]></p>
+            <ul class="socialTeam">
+              <li><a href="" class="btn btn-inverse tips" data-original-title="follow me on Facebook"><i class="icon-facebook"></i></a></li>
+              <li><a href="" class="btn btn-inverse tips" data-original-title="follow me on Twitter"><i class="icon-twitter"></i></a></li>
+              <li><a href="" class="btn btn-inverse tips" data-original-title="follow me on Linkedin"><i class="icon-linkedin"></i></a></li>
+            </ul>
+          </div>
+          <div class="span6 skills">
+            <h3>Statistiche</h3>
+            <h4>Presenze</h4>
+            <div class="progress">
+              <div class="bar" style="width: 90%;"></div>
+            </div>
+            <h4>Media voto</h4>
+            <div class="progress">
+              <div class="bar" style="width: 70%;"></div>
+            </div>
+            <h4>Media gol</h4>
+            <div class="progress">
+              <div class="bar" style="width: 50%;"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <hr>
+      <[/foreach]>
+    </section>
+    <!-- team2-->
+  </section>

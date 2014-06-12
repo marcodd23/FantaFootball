@@ -1,0 +1,33 @@
+<div class="row mb15">
+	<div class="span12">
+		<h2>Classifica di lega</h2>
+	</div>
+	<div class="span12">
+		<table class="table table-striped classification">
+			<thead>
+				<tr>
+					<th class="left">Squadra</th>
+					<th>Partite giocate</th>
+					<th>Gol fatti</th>
+					<th>Gol subiti</th>
+					<th>Differenza reti</th>
+					<th>Punteggio globale</th>
+					<th>Punti classifica</th>
+				</tr>
+			</thead>
+			<tbody>
+				<[foreach]>
+				<tr>
+					<td class="left"><[ROSA]></td>
+					<td><[GIORNATE]></td>
+					<td><[GF]></td>
+					<td><[GS]></td>
+					<td><[DIFF]></td>
+					<td><[PT]></td>
+					<td><strong><[PC]></strong></td>
+				</tr>
+				<[/foreach]>
+			</tbody>
+		</table>
+	</div>
+</div>

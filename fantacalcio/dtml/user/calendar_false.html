@@ -1,0 +1,31 @@
+ <div class="row mb15">
+        <div class="span12">
+        	<h2>Calendario di lega</h2> 
+        <div class="alert">
+  			<strong>Attenzione!</strong> Non è stato creato ancora un calendario.
+		</div>
+        	<p></p>
+        	<p align="center"> <a href="javascript:checkCalendarReady();" class="btn btn-large">Genera calendario</a></p>
+        </div>
+        
+   <script>
+   	function checkCalendarReady(){
+   		$.ajax({
+   			url:"checkCalendarReady.php",
+   			type:"POST",
+   			dataType:"json",
+   			data:{id:"<[LEAGUE_ID]>"},
+   			success:function(data){
+   				if(!data.status){
+   					var html="";
+   					html+='<div style="margin-right: 4px;" class="alert alert-block alert-error"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Errore: </strong>'+data.message+ '</div>';
+   			  		$("#result").html(html);
+   			  	}
+   				else{
+   					location.href="calendar_start.php?id=<[LEAGUE_ID]>";
+   				}
+   			}
+   		});
+   	}
+   </script>
+      </div>

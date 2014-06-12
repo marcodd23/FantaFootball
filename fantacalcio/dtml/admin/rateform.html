@@ -1,0 +1,60 @@
+<style>
+#players_rate{
+	font-size: 12px;
+}
+#players_rate th, #players_rate td{
+	text-align: center;
+}
+
+#players_rate th.left,#players_rate td.left{
+	text-align: left;
+}
+#players_rate input[type=text]{
+	width: 18px;
+}
+#players_rate input[type=text].voto{
+	width: 30px;
+}
+</style>
+<div class="hero-unit">
+	<form class="form-horizontal" method="post" action="rateform.php?action=<[ACTION]>">
+	<input type="hidden" value="<[DAY]>" name="day"/>
+		<table class="table table-striped" id="players_rate">
+			<thead>
+				<tr>
+					<th class="left">Giocatore</th>
+					<th>Voto</th>
+					<th>Gol fatto</th>
+					<th>Gol subito</th>
+					<th>Assist</th>
+					<th>Autogol</th>
+					<th>Ammonizione</th>
+					<th>Espulsione</th>
+					<th>Rigore parato</th>
+					<th>Rigore sbagliato</th>
+					<th>Gol pareggio</th>
+					<th>Gol vittoria</th>
+				</tr>
+			</thead>
+			<tbody>
+				<[foreach]>
+				<tr>
+					<td class="left"><input type="hidden" value="<[ID]>" name="player_<[ID]>" /><[NOME]></td>
+					<td><input type="text" name="rate_<[ID]>" value="" class="voto"/></td>
+					<td><input type="text" name="gf_<[ID]>" value="" /></td>
+					<td><input type="text" name="gs_<[ID]>" value="" /></td>
+					<td><input type="text" name="ass_<[ID]>" value="" /></td>
+					<td><input type="text" name="ag_<[ID]>" value="" /></td>
+					<td><input type="checkbox" name="amm_<[ID]>" value="1" /></td>
+					<td><input type="checkbox" name="esp_<[ID]>" value="1" /></td>
+					<td><input type="text" name="rp_<[ID]>" value="" /></td>
+					<td><input type="text" name="rs_<[ID]>" value="" /></td>
+					<td><input type="checkbox" name="gp_<[ID]>" value="1" /></td>
+					<td><input type="checkbox" name="gv_<[ID]>" value="1" /></td>
+				</tr>
+				<[/foreach]>
+			</tbody>
+		</table>
+		<button type="submit" class="btn btn-primary">Conferma</button>
+	</form>
+</div>

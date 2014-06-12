@@ -1,0 +1,58 @@
+  <script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+    $('#players').dataTable({
+		"bJQueryUI": true,
+		"bProcessing": true,
+		"bServerSide": true,
+		"sAjaxSource": "./findAllPlayers.php?preSearch=<[NOME]>"
+    });
+});
+</script>
+<div class="hero-unit">
+<form class="form-horizontal" method="post" action="teamform.php?action=<[ACTION]>">
+<input type="hidden" value="<[ID]>" name="id_hidden">
+  <div class="control-group">
+    <label class="control-label" for="inputNome">Nome</label>
+    <div class="controls">
+      <input type="text" id="inputNome" placeholder="Nome" name="nome" value="<[NOME]>">
+    </div>
+  </div>
+   <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn btn-primary">Salva</button>
+    </div>
+  </div>
+ </form>
+ </div>
+
+<div>
+<table id="players" style="text-align: center;">
+	    <thead>
+	        <tr>
+	            <th>Nome</th>
+	            <th>Cognome</th>
+	            <th>Quotazione</th>
+	            <th>Ruolo</th>
+	            <th>Squadra</th>
+	            <th>Azione</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	</table>
+	<br/>
+	<a href="playerform.php" class="btn btn-primary btn-small" onclick="">Add</a>
+</div>
+<!-- <table class="table table-condensed">
+  
+  <tbody>
+  <[foreach]>
+    <tr>
+      <td><[NOME_GIOCATORE]></td>
+      <td><[COGNOME]></td>
+      <td><a href='playerform.php?id=<[ID_GIOCATORE]>'><i class='icon-edit'></i></a>| 
+		  <a href='playerform.php?action=delete&id=<[ID_GIOCATORE]>'><i class='icon-trash'></i></a></td>
+      </tr>
+    <[/foreach]>
+  </tbody>
+</table>-->

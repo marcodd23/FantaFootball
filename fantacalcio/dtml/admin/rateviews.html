@@ -1,0 +1,61 @@
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+	var day_number=$("#day_select").val();
+    $('#players').dataTable({
+		"bJQueryUI": true,
+		"bProcessing": true,
+		"bServerSide": true,
+		"sAjaxSource": "./findAllRates.php",
+		 "fnServerParams": function ( aoData ) {
+		      aoData.push( { "name": "giornata", "value": day_number } );
+		    },
+    });
+});
+
+function changeDay(){
+	var day_number=$("#day_select").val();
+    $('#players').dataTable({
+		"bJQueryUI": true,
+		"bProcessing": true,
+		"bServerSide": true,
+		"sAjaxSource": "./findAllRates.php",
+		"fnServerParams": function ( aoData ) {
+		      aoData.push( { "name": "giornata", "value": day_number } );
+		 },
+		 "bDestroy": true
+    });
+}
+</script>
+
+<div class="row-fluid">
+<label for="day_select">Giornata</label>
+<select name="day" id="day_select" onchange="changeDay();">
+<[foreach]>
+<option value="<[DAY_NUMBER]>" <[SELECTED]>><[DAY_NUMBER]></option>
+<[/foreach]>
+</select>
+<a class="btn btn-primary btn-medium" href="rateform.php">Add</a>
+</div>
+<br/>
+<div>
+<table id="players" style="text-align: center;">
+	    <thead>
+	        <tr>
+	            <th>Nome</th>
+	            <th>Voto</th>
+	            <th>Gol fatto</th>
+	            <th>Gol subito</th>
+	            <th>Assit</th>
+	            <th>Autogol</th>
+	            <th>Ammonizione</th>
+	            <th>Espulsione</th>
+	            <th>Rigore parato</th>
+	            <th>Rigore sbagliato</th>
+	            <th>Gol partita</th>
+	            <th>Gol pareggio</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	</table>
+</div>

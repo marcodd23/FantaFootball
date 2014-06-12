@@ -1,0 +1,113 @@
+<header class="page-header">
+      <h1><[TITLE]> rosa<a href="league.php?id=<[LEAGUE_ID]>" style="float: right;" title="Torna alla pagina di lega"><i class="icon-left-circled"></i></a></h1>
+    </header>
+   <section class="container clearfix">
+      <div class="row">
+      	<aside class="span3">
+                <section class="widget search clearfix">
+                  <h3>Ricerca</h3>
+                    <div class="input-append">
+                      <input type="text" onkeyup="addSearch();" placeholder="Cerca giocatore" id="visibleSearch">
+                    </div>
+                </section>
+                <section class="widget">
+                  <h3>Ruoli</h3>
+                  <ul class="iconsList my" id="roleList">
+                    <li class="portiere"><a id="por" href="javascript:addRole('por');"><i class="icon-right-open"></i> Portieri</a></li>
+                    <li class="difensore"><a id="dif" href="javascript:addRole('dif');"><i class="icon-right-open"></i> Difensori</a></li>
+                    <li class="centrocampista"><a id="cen" href="javascript:addRole('cen');"><i class="icon-right-open"></i> Centrocampisti</a></li>
+                    <li class="attaccante"><a id="att" href="javascript:addRole('att');"><i class="icon-right-open"></i> Attaccanti</a></li>
+                  </ul>
+                </section>
+                <section class="widget blogTags">
+                  <h3>Squadre</h3>
+                  <ul id="teamList">
+                  <[foreach]>
+                    <li id="<[TEAM_NAME]>_li"><a id="<[TEAM_NAME]>_a" href="javascript:addTeam('<[TEAM_NAME]>');" class="w2"><[TEAM_NAME]></a></li>
+                  <[/foreach]>
+                  </ul>
+                </section>
+              </aside>
+        <div class="span6">
+          <article>
+          <h2>Giocatori <span id="counter" style="float:right;"></span></h2>
+          </article>
+          <table class="table table-bordered">
+          <thead>
+          	<tr class="pointer">
+          	<th id="nome" onclick="addOrder('g.cognome');">Nome<i></i></th>
+          	<th id="squadra" onclick="addOrder('s.nome');">Squadra<i></i></th>
+          	<th id="quotazione" onclick="addOrder('g.quotazione');">Quotazione<i></i></th></tr>
+          </thead>
+          <tbody id="result_list">
+          <!-- <tr class="success"><td><a href="#">Christopodopulso</a></td><td>Juventus</td><td>98</td></tr> -->
+          </tbody>
+          </table>
+         <div>
+          <nav class="pagination pagination-centered" id="pagination">
+                  <!-- <ul>
+                    <li><a href="#">Prev</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">Next</a></li>
+                  </ul> -->
+                </nav>
+         </div>
+          
+        </div>
+        <form id="team_form" action="team_submit.php?action=<[ACTION]>" method="post" novalidate="novalidate">
+	        <aside class="span3">
+	        	<section class="widget">
+	        		<h3>Nome rosa</h3>
+	        		<div class="input-append">
+              		<input type="text" name="name" id="name" placeholder="Inserisci nome rosa" title="Il nome è obbligatorio" value="<[NAME_VALUE]>">
+              </div>
+	        	</section>
+	        	<section class="widget">
+	        		<h3>Rosa scelta</h3>
+	        		<p>Portieri</p>
+	        		<ul id="por_list">
+	        		<[PORTIERI]>
+	        		</ul>
+	        		<p>Difensori</p>
+	        		<ul id="dif_list">
+	        		<[DIFENSORI]>
+	        		</ul>
+	        		<p>Centrocampisti</p>
+	        		<ul id="cen_list">
+	        		<[CENTROCAMPISTI]>
+	        		</ul>
+	        		<p>Attaccanti</p>
+	        		<ul id="att_list">
+	        		<[ATTACCANTI]>
+	        		</ul>
+	        		<textarea name="rosa" id="rosa_text" title="Rosa non completa"><[ROSA_TEXT]></textarea>
+	        		<input type="hidden" name="league" value="<[LEAGUE_ID]>"/>
+	        		<input type="hidden" name="user" value="<[USER_ID]>"/>
+	        		<input type="hidden" name="team_id" value="<[TEAM_ID]>"/>
+	        		
+	        		<button type="submit" class="btn btn-small" >Conferma</button>
+	        	</section>
+	        </aside>
+        </form>
+      	</div>
+    </section>
+    <form id="filterDataForm" style="display: none;">
+    <label for="search">Search</label>
+    <input type="text" name="search" id="search"/>
+    <label for="team">Team</label>
+    <input type="text" name="team" id="team"/>
+    <label for="role">Role</label>    
+    <input type="text" name="role" id="role"/> 
+    <label for="role">itemSort</label>    
+    <input type="text" name="itemSort" id="itemSort"/>
+	<label for="role">dirSort</label>    
+    <input type="text" name="dirSort" id="dirSort" value="asc"/>
+    <label for="role">page</label>    
+    <input type="text" name="page" id="page" value="1"/>
+    <label for="role">itemsForPage</label>    
+    <input type="text" name="itemsForPage" id="itemsForPage" value="20"/>    
+    </form>
+<script src="../resources/my/js/playersFilter.js"></script>

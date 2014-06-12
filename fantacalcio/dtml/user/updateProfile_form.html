@@ -1,0 +1,36 @@
+<header class="page-header">
+      <h1>Modifica profilo</h1>
+    </header>
+   <section class="container clearfix slideContactpage">
+      <div class="row">
+        <div id="contactinfoWrapperPage" class="clearfix">
+          <div class="span3">
+          <p>Ricorda:</p>
+            <ul>
+            <li>Tutti i campi, tranne la password, sono obbligatori</li>
+            <li>La username deve essere di almeno 6 caratteri</li>
+            <li>La passowrd deve essere di almeno 8 caratteri</li>
+            </ul>
+          </div>
+          <!-- contact form -->
+          <div class="span9">
+            <form method="post" action="updateProfile.php" id="update_form" novalidate="novalidate" class="form">
+              <label for="name" class="<[CLASS]>"><[NAME_MESSAGE]></label>
+              <input type="text" name="name" id="name" placeholder="Nome" title="Il nome è obbligatorio" value="<[NAME_VALUE]>">
+              <label for="surname"  class="<[CLASS]>"><[SURNAME_MESSAGE]></label>
+              <input type="text" name="surname" id="surname" placeholder="Cognome" title="Il cognome è obbligatorio" value="<[SURNAME_VALUE]>">
+              <label for="email" class="<[CLASS]>"><[EMAIL_MESSAGE]></label>
+              <input type="text" name="email" id="email" placeholder="Email" title="Inserisci un indirizzo mail valido" value="<[EMAIL_VALUE]>">
+              <label for="username" class="<[CLASS]>"><[USERNAME_MESSAGE]></label>
+              <input name="username" type="text" id="username" placeholder="Username" title="L'username deve contenere almeno 6 caratteri" value="<[USERNAME_VALUE]>">
+              <label for="password" class="<[CLASS]>"><[PASSWORD_MESSAGE]></label>
+              <input name="password" type="password" id="password" placeholder="Nuova password" title="La password deve contenere almeno 8 caratteri" value="<[PASSWORD_VALUE]>">
+             
+              <br>
+              <button name="submit" type="submit" class="btn" id="submit"> Conferma</button>
+            </form>
+          </div>
+          <!-- contact form -->
+        </div>
+       </div>
+    </section>

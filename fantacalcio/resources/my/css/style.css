@@ -1,0 +1,126 @@
+/* LOGIN HOME */
+
+.login_home>span>label{
+	display: inline;
+	color: #999;
+	font-size: inherit;
+	font-weight: 300;
+}
+
+.login_home>span>input[type="text"],
+.login_home>span>input[type="password"]{
+	display:inline;
+	width:120px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.login_home>span>input[type="text"]:FOCUS,
+.login_home>span>input[type="password"]:FOCUS{
+	border-color: #66afe9;
+outline: 0;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+form>.error{
+	color: #EB5F50;
+}
+.error{
+	color: #EB5F50;
+}
+#email_error{
+	color: #EB5F50;
+}
+
+.form input[type="text"],
+.form input[type="password"]{
+	-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form input[type="text"]:FOCUS,
+.form input[type="password"]:FOCUS{
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+#result{
+	position: fixed;
+	width:100%;
+	z-index: 1001;
+	margin-top: -11px;
+	padding-left: 2px;
+}
+#loading{
+	 position:fixed;
+	 z-index:1001; 
+	 top: 50%;
+	 left: 50%;
+	 display: none;
+}
+.portiere{
+	background-color: #dff0d8;
+}
+.difensore{
+	background-color: #f2dede;
+}
+.centrocampista{
+	background-color: #fcf8e3;
+}
+.attaccante{
+	background-color: #d9edf7;
+}
+.portiere_leggend{
+	color: #dff0d8;
+}
+.difensore_leggend{
+	color: #f2dede;
+}
+.centrocampista_leggend{
+	color: #fcf8e3;
+}
+.attaccante_leggend{
+	color: #d9edf7;
+}
+.iconsList.my li{
+	margin-bottom: 4px;
+}
+.pointer>th{
+	cursor: pointer;
+}
+.selected{
+	background-color:#003D60;
+	border:1px solid #003D60;
+	border-bottom-color: 1px solid #087fb2;
+	color: #ffffff;	
+}
+.default_cursor{
+	cursor: default;
+}
+.table.formation{
+	font-size: 13px;
+}
+.table.formation th, .table.formation td{
+	text-align: center;
+}
+
+.table.formation th.left,.table.formation td.left{
+	text-align: left;
+}
+.table.classification{
+	font-size: 13px;
+}
+.table.classification th, .table.classification td{
+	text-align: center;
+}
+
+.table.classification th.left,.table.classification td.left{
+	text-align: left;
+}
+#retrieve{
+	color:#ffffff;
+	font-weight:bold;
+	font-style: italic;
+}

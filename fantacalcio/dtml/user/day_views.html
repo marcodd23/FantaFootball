@@ -1,0 +1,27 @@
+<section class="content">
+	<header class="page-header">
+		<h1>Calendario di lega<a href="league.php?id=<[LEAGUE_ID]>" style="float: right;" title="Torna alla pagina di lega"><i class="icon-left-circled"></i></a></h1>
+	</header>
+	<div class="row">
+		<div class="span12">
+			<p class="pull-right"><i class="icon-blank portiere_leggend"></i> Portieri
+			<i class="icon-blank difensore_leggend"></i> Difensori
+			<i class="icon-blank centrocampista_leggend"></i> Centrocampisti
+			<i class="icon-blank attaccante_leggend"></i> Attaccanti</p>
+		</div>
+	</div>
+	<div class="row">
+		<[foreach]>
+		<div class="span6">
+			<h2><[HOME]> <span><[TOTAL_HOME]></span></h2>
+			<[FORMATION_HOME]>
+		</div>
+		<div class="span6">
+			<h2><[AWAY]> <span><[TOTAL_AWAY]></span></h2>
+			<[FORMATION_AWAY]>
+		</div>
+		<[/foreach]>
+	</div>
+	<[RIPOSO]>
+	
+</section>

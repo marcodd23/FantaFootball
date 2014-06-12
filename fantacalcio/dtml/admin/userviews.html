@@ -1,0 +1,31 @@
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+    $('#players').dataTable({
+		"bJQueryUI": true,
+		"bProcessing": true,
+		"bServerSide": true,
+		"sAjaxSource": "./findAllUsers.php"
+    });
+});
+</script>
+<div class="row-fluid">
+<a class="btn btn-primary btn-medium" href="userform.php">Add</a>
+</div>
+<br/>
+<div>
+<table id="players" style="text-align: center;">
+	    <thead>
+	        <tr>
+	            <th>Nome</th>
+	            <th>Cognome</th>
+	            <th>Email</th>
+	            <th>Username</th>
+	            <th>Password</th>
+	            <th>Gruppo</th>
+	            <th>Azione</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	</table>
+</div>

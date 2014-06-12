@@ -1,0 +1,113 @@
+<script>
+$("#stat").addClass("active");
+function show(){
+	$(".toggle").show("slow");
+	$(".pointer").removeClass("icon-down-circle");
+	$(".pointer").addClass("icon-up-circle");
+	$(".pointer").attr("onclick","hide()");
+	$(".pointer").attr("title","Nascondi filtri");
+};
+function hide(){
+	$(".toggle").hide("slow");
+	$(".pointer").addClass("icon-down-circle");
+	$(".pointer").removeClass("icon-up-circle");	
+	$(".pointer").attr("onclick","show()");
+	$(".pointer").attr("title","Espandi filtri");
+};
+</script>
+<style>
+.toggle{
+display: none;
+}
+.pointer{
+cursor: pointer;
+}
+</style>
+<section class="content">
+    <header class="page-header">
+      <h1>Statistiche</h1>
+    </header>
+    <!-- team2-->
+    <section>
+      <article>
+      <div class="row">
+          <div class="span12">
+            <h2><span>Filtri di ricerca <i title="Espandi filtri" onclick="show();" class="icon-down-circle pointer"></i></span></h2>
+          </div>
+          <div class="span3 toggle">
+          <h4>Nome giocatore</h4>
+          	<div class="input-append">
+          		<input type="text" onkeyup="addSearch();" placeholder="Cerca giocatore" id="visibleSearch">
+          	</div>
+          </div>
+          <div class="span2 toggle">
+          	<h4>Ruoli</h4>
+	          <ul class="iconsList my" id="roleList">
+		          <li class="portiere"><a id="por" href="javascript:addRole('por');"><i class="icon-right-open"></i> Portieri</a></li>
+		          <li class="difensore"><a id="dif" href="javascript:addRole('dif');"><i class="icon-right-open"></i> Difensori</a></li>
+		          <li class="centrocampista"><a id="cen" href="javascript:addRole('cen');"><i class="icon-right-open"></i> Centrocampisti</a></li>
+		          <li class="attaccante"><a id="att" href="javascript:addRole('att');"><i class="icon-right-open"></i> Attaccanti</a></li>
+	          </ul>
+          </div>
+          <div class="span7 blogTags toggle">
+          <h4>Squadre</h4>
+          	<ul id="teamList">
+            	<[foreach]>
+            	<li id="<[TEAM_NAME]>_li"><a id="<[TEAM_NAME]>_a" href="javascript:addTeam('<[TEAM_NAME]>');" class="w2"><[TEAM_NAME]></a></li>
+            	<[/foreach]>
+            </ul>
+          </div>
+          <div class="span12 toggle">
+          	
+          </div>
+      </div>
+      </article>
+        <div class="row">
+          <div class="span12">
+            <h2><span id="counter"></span>
+          	<span id="order_list" class="pull-right">Ordina per: 
+          	<a id="nome" class="btn btn-mini" href="javascript:addOrder('g.cognome');">Nome<i></i></a>
+          	<a id="ruolo"class="btn btn-mini" href="javascript:addOrder('g.ruolo');">Ruolo<i></i></a>
+          	<a id="presenze" class="btn btn-mini" href="javascript:addOrder('st.presenze');">Presenze<i></i></a>
+          	<a id="media" class="btn btn-mini" href="javascript:addOrder('st.media');">Media<i></i></a>
+          	<a id="gol" class="btn btn-mini" href="javascript:addOrder('st.gol_fatti');">Gol<i></i></a></span></h2>
+          </div>
+        </div>
+        <div class="row" id="alert">
+        	<div class="span12">
+        		<div class="alert alert-error">
+ 	 				<strong>Attenzione!</strong> Non ci sono elementi corrispondenti ai parametri specificati.
+				</div>
+        	</div>
+        </div>
+      	<div id="result_list"></div>
+    </section>
+    <!-- team2-->
+    <nav class="pagination pagination-centered" id="pagination">
+                  <!-- <ul>
+                    <li><a href="#">Prev</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">Next</a></li>
+                  </ul> -->
+                </nav>
+  </section>
+      <form id="filterDataForm" style="display: none;">
+    <label for="search">Search</label>
+    <input type="text" name="search" id="search"/>
+    <label for="team">Team</label>
+    <input type="text" name="team" id="team"/>
+    <label for="role">Role</label>    
+    <input type="text" name="role" id="role"/> 
+    <label for="role">itemSort</label>    
+    <input type="text" name="itemSort" id="itemSort"/>
+	<label for="role">dirSort</label>    
+    <input type="text" name="dirSort" id="dirSort" value="asc"/>
+    <label for="role">page</label>    
+    <input type="text" name="page" id="page" value="1"/>
+    <label for="role">itemsForPage</label>    
+    <input type="text" name="itemsForPage" id="itemsForPage" value="20"/>    
+    </form>
+<script src="./resources/my/js/playersStatFilter.js"></script>

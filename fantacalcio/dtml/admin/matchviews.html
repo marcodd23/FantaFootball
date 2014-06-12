@@ -1,0 +1,27 @@
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+    $('#players').dataTable({
+		"bJQueryUI": true,
+		"bProcessing": true,
+		"bServerSide": true,
+		"sAjaxSource": "./findAllMatches.php"
+    });
+});
+</script>
+<div class="row-fluid">
+<a class="btn btn-primary btn-medium" href="matchform.php">Add</a>
+</div>
+<br/>
+<div>
+<table id="players" style="text-align: center;">
+	    <thead>
+	        <tr>
+	            <th>Squadra casa</th>
+	            <th>Squadra trasferta</th>
+	            <th>Azione</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	</table>
+</div>
